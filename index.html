@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>GP Streaming - Downloader</title>
+
   <link rel="icon" href="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=192,h=192,fit=crop,f=png/Y4LvG5wK50U412B5/favicon-dJobj22Gg5c9rbDZ.png">
 
   <style>
@@ -21,7 +22,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 125px; /* altura da faixa */
+      height: 125px;
       background-color: #1E1F22;
       display: flex;
       align-items: center;
@@ -32,12 +33,13 @@
     .top-bar img {
       max-height: 175px;
       width: auto;
+      cursor: pointer; /* indica que é clicável */
     }
 
     /* Iframe abaixo da faixa */
     .content {
       position: absolute;
-      top: 120px; /* mesma altura da faixa */
+      top: 120px;
       left: 0;
       width: 100%;
       height: calc(100% - 80px);
@@ -55,13 +57,25 @@
 
   <!-- Faixa preta com logo -->
   <div class="top-bar">
-    <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop,q=95/Y4LvG5wK50U412B5/logo-sem-fundo-YanJrggPx2UaB6vV.png" alt="Logo">
+    <img
+      src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop,q=95/Y4LvG5wK50U412B5/logo-sem-fundo-YanJrggPx2UaB6vV.png"
+      alt="Logo"
+      onclick="copiarTexto()"
+    >
   </div>
 
   <!-- Conteúdo -->
   <div class="content">
-    <iframe src="https://demo.filestash.app/login"referrerpolicy="no-referrer"></iframe>
+    <iframe src="https://demo.filestash.app/login" referrerpolicy="no-referrer"></iframe>
   </div>
+
+  <!-- JS silencioso -->
+  <script>
+    function copiarTexto() {
+      const texto = "gpstreaming.com.br";
+      navigator.clipboard.writeText(texto);
+    }
+  </script>
 
 </body>
 </html>
