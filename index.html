@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>FTP Online</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Faixa superior */
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 125px; /* altura da faixa */
+      background-color: #1E1F22;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .top-bar img {
+      max-height: 175px;
+      width: auto;
+    }
+
+    /* Iframe abaixo da faixa */
+    .content {
+      position: absolute;
+      top: 120px; /* mesma altura da faixa */
+      left: 0;
+      width: 100%;
+      height: calc(100% - 80px);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Faixa preta com logo -->
+  <div class="top-bar">
+    <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop,q=95/Y4LvG5wK50U412B5/logo-sem-fundo-YanJrggPx2UaB6vV.png" alt="Logo">
+  </div>
+
+  <!-- Conteúdo -->
+  <div class="content">
+    <iframe src="https://demo.filestash.app/login"></iframe>
+  </div>
+
+</body>
+</html>
